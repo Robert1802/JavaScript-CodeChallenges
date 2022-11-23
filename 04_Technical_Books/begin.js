@@ -33,3 +33,31 @@ class Book {
 /*
   WRITE YOUR SOLUTION HERE
 */
+
+class TechnicalBook extends Book {
+  constructor(title, author, ISBN, numCopies, edition){
+    super(title, author, ISBN, numCopies);
+    this.edition = edition
+  }
+
+  getEdition() {
+    return `The current version of this book is ${this.edition}`;
+  }
+}
+
+const CleanCode = new Book("Clean Code", "Robert Martin", 123919, 5);
+console.log(CleanCode.availability);
+CleanCode.restock(12);
+console.log(CleanCode.availability);
+CleanCode.sell(17);
+console.log(CleanCode.availability);
+
+const CrackingTheCodingInterview = new TechnicalBook(
+  "Cracking The Coding Interview",
+  "Gayle Laackmann McDowell",
+  1209123,
+  7,
+  "2.3"
+);
+console.log(CrackingTheCodingInterview.availability);
+console.log(CrackingTheCodingInterview.getEdition());

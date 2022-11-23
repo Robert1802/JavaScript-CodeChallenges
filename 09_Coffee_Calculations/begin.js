@@ -7,6 +7,7 @@ let totalBill = 0;
 
 function coffeeCalculator (coffeeArray) {
   let coffeeSum = coffeeArray.reduce(
+    // (Acumulator value, Individual value) => (loop through each value adding)
     (totalCoffees, individualCoffee) => (totalCoffees += individualCoffee)
   )
   totalBill = coffeeSum * coffeePrice
